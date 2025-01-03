@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daba</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="icon" type="image/x-icon" href="./img3.png">
+
+    <!--email-->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "g3Ms2sCfE_FBvgFym",
+            });
+        })();
+    </script>
+    <script src="email.js"></script>
+
+</head>
+<body>
+    <!-- Add mobile navigation -->
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-image">
+                <div class="modal-image-gallery" id="modalImageGallery">
+                    <!-- Images will be inserted here by JavaScript -->
+                </div>
+                <button class="gallery-nav prev" id="galleryPrev">&lt;</button>
+                <button class="gallery-nav next" id="galleryNext">&gt;</button>
+            </div>
+            <div class="modal-details">
+                <h2 id="modalName"></h2>
+                <p id="modalPrice"></p>
+                <p id="modalDescription"></p>
+                <button class="purchase-btn" id="openPurchaseForm">Request Purchase</button>
+            </div>
+            <button class="image-nav prev" id="prevImage">Previous Item</button>
+            <button class="image-nav next" id="nextImage">Next Item</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="column left-column">
+            <div class="row">
+                <div class="vertical-text">welcome to</div>
+            </div>
+            <div class="row">
+                <div class="title-box">
+                    <p class="title">shop</p>
+                </div>
+            </div>
+        </div>
+        <div class="column right-column">
+            <div class="left-side">
+                <div class="catalog">
+                    <div class="catalog-item" data-description="Putni ir īpaši izstrādāts dizains, kas atspoguļo dabas skaistumu un brīvību. Džinsu audums ir augstas kvalitātes, nodrošinot ilgstošu kalpošanu un komfortu." data-images='["./img1.jpeg", "./img2.jpeg", "./img3.png"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./img1.jpeg" alt="Product Image">
+                                <img src="./img2.jpeg" alt="Product Image">
+                                <img src="./img3.png" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">putni</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Ozols ir izturīgs un elegants dizains, kas simbolizē spēku un stabilitāti." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">ozols</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Jūra ir mierīgs un atsvaidzinošs dizains, kas atgādina par jūras viļņiem un pludmales brīvdienām." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">jūra</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Puķes ir krāsains un dzīvespriecīgs dizains, kas atspoguļo pavasara ziedēšanu un dabas skaistumu." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">puķes</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Puķe ir vienkāršs un elegants dizains, kas izceļas ar savu skaistumu un smalkumu." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">puķe</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 6 is a unique design that stands out with its modern and stylish look." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 6</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 7 is a classic design that never goes out of style." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 7</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 8 is a vibrant and colorful design that adds a pop of color to any outfit." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 8</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 9 is a sleek and modern design that is perfect for any occasion." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 9</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 10 is a bold and edgy design that makes a statement." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 10</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <div class="catalog-item" data-description="Item 11 is a timeless design that is always in fashion." data-images='["./image1.jpg", "./image2.jpg", "./image3.jpg"]'>
+                        <div class="item-image-container">
+                            <div class="item-image-gallery">
+                                <img src="./image1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <p class="item-name">Item 11</p>
+                            <p class="item-price">69 EUR</p>
+                        </div>
+                    </div>
+                    <!-- Add more items as needed -->
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="text"><p class="home"><a href="index.html">home</a></p></div>
+                <div class="text"><p class="contacts"><a href="contacts.html">contacts</a></p></div>
+            </div>
+        </div>
+    </div>
+    <div class="purchase-overlay" id="purchaseOverlay">
+        <div class="purchase-modal">
+            <button class="modal-close" id="purchaseClose">&times;</button>
+            <h2>Purchase Request</h2>
+            <p class="purchase-policy">* By submitting this form, you agree to our purchase policy. Payment will be arranged after we confirm your order via email or phone.</p>
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <input type="name" id="name-email" placeholder="Your Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email-email" placeholder="Your Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone-email" placeholder="Your Phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="message" id="jean-name-email" placeholder="Product name" name="Jeans-name" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="comment-email" type="text" name="comment" placeholder="Additional Comments (optional)"></textarea>
+                </div>
+                <button type="submit" class="purchase-btn" onclick="sendMail()">Submit Request</button>
+            </form>
+        </div>
+    </div>
+    <script src="shop.js"></script>
+</body>
+</html>
