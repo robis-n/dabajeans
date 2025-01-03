@@ -7,11 +7,5 @@ function sendMail(){
         comment: document.getElementById('comment-email').value,
     }
 
-    emailjs.send("service_bhj4p37","template_2y0oe3c",{
-        name: "robis",
-        email: "robis.niko@gmail.com",
-        phone: "26330969",
-        jeans: "puķes",
-        comment: "s izmers",
-        });
+    emailjs.send("service_bhj4p37","template_2y0oe3c",parms).then(alert("Email Sent!"))
 }
