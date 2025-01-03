@@ -322,6 +322,13 @@
         height: 40px;
     }
 
+    button#prevImage {
+        margin-bottom: 20px;
+    }
+
+    button#nextImage {
+        margin-bottom: 20px;
+    }
     .modal-content {
         padding-bottom: calc(40px + 1rem);
         flex-direction: column;
