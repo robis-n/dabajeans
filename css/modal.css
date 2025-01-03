@@ -432,6 +432,7 @@
 .purchase-overlay.active {
     opacity: 1;
     display: flex;
+    overflow-y: hidden;
 }
 
 .purchase-modal {

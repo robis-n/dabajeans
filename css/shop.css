@@ -206,8 +206,10 @@ a {
     padding: 10px 20px 10px 10px; /* Increased right padding */
     height: 100%;
     box-sizing: border-box;
-    scrollbar-width: 15px;
+    scrollbar-width: thin;
     scrollbar-color: #0d5011 #ed3700;
+    -webkit-scrollbar-width: 15px;
+    -webkit-scrollbar-color: #0d5011 #ed3700;
     min-height: 100%; /* Add this */}
 
 .left-side::-webkit-scrollbar {
@@ -359,6 +361,17 @@ a {
     font-size: clamp(0.8rem, 0.8rem + 2vw, 2.5rem); /* Adjusted font size */
     margin: 1rem 0;
     width: 100%;
+}
+
+.purchase-overlay {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.purchase-modal {
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* Desktop version */
