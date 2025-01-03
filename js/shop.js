@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const openPurchaseBtn = document.getElementById('openPurchaseForm');
     const purchaseClose = document.getElementById('purchaseClose');
 
+    const fullscreenOverlay = document.getElementById('fullscreenOverlay');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+    const fullscreenClose = document.getElementById('fullscreenClose');
+    const fullscreenPrev = document.getElementById('fullscreenPrev');
+    const fullscreenNext = document.getElementById('fullscreenNext');
+    let currentFullscreenIndex = 0;
+
     let currentItemIndex = 0;
     const catalogItems = Array.from(document.querySelectorAll('.catalog-item'));
 
@@ -195,6 +202,50 @@ document.addEventListener('DOMContentLoaded', () => {
     purchaseOverlay.addEventListener('click', (e) => {
         if (e.target === purchaseOverlay) {
             closePurchaseModal();
+        }
+    });
+
+    // Add click handler for modal images
+    document.querySelector('.modal-image').addEventListener('click', function(e) {
+        if (e.target.tagName === 'IMG') {
+            currentFullscreenIndex = Array.from(modalImageGallery.children).indexOf(e.target);
+            showFullscreen(currentFullscreenIndex);
+        }
+    });
+
+    function showFullscreen(index) {
+        const images = Array.from(modalImageGallery.children);
+        fullscreenImage.src = images[index].src;
+        fullscreenOverlay.style.display = 'block';
+        currentFullscreenIndex = index;
+    }
+
+    fullscreenClose.addEventListener('click', () => {
+        fullscreenOverlay.style.display = 'none';
+    });
+
+    fullscreenPrev.addEventListener('click', () => {
+        const images = Array.from(modalImageGallery.children);
+        currentFullscreenIndex = (currentFullscreenIndex - 1 + images.length) % images.length;
+        showFullscreen(currentFullscreenIndex);
+    });
+
+    fullscreenNext.addEventListener('click', () => {
+        const images = Array.from(modalImageGallery.children);
+        currentFullscreenIndex = (currentFullscreenIndex + 1) % images.length;
+        showFullscreen(currentFullscreenIndex);
+    });
+
+    // Add keyboard navigation for fullscreen
+    document.addEventListener('keydown', (e) => {
+        if (fullscreenOverlay.style.display === 'block') {
+            if (e.key === 'Escape') {
+                fullscreenOverlay.style.display = 'none';
+            } else if (e.key === 'ArrowLeft') {
+                fullscreenPrev.click();
+            } else if (e.key === 'ArrowRight') {
+                fullscreenNext.click();
+            }
         }
     });
 });
