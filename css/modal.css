@@ -515,7 +515,7 @@
     border: none;
     cursor: pointer;
     z-index: 1001;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .fullscreen-nav {
