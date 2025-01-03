@@ -1,0 +1,237 @@
+/* Define the Epilogue font */
+@font-face {
+    font-family: 'ClashDisplay-Semibold';
+    src: url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+         url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.woff') format('woff'),
+         url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ClashDisplay-Medium';
+    src: url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+         url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff') format('woff'),
+         url('../font/ClashDisplay_Complete/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Epilogue-Regular';
+    src: url('../font/Epilogue_Complete/Epilogue_Complete/Fonts/WEB/fonts/Epilogue-Regular.woff2') format('woff2'),
+         url('../font/Epilogue_Complete/Epilogue_Complete/Fonts/WEB/fonts/Epilogue-Regular.woff') format('woff'),
+         url('../font/Epilogue_Complete/Epilogue_Complete/Fonts/WEB/fonts/Epilogue-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'ClashDisplay-Semibold'; /* Apply the Epilogue font */
+}
+
+p {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.column {
+    height: 100%;
+    position: relative; /* Ensure the column is the positioning context */
+}
+
+.left-column {
+    background-color: #ed3700;
+    flex: 9; /* 75% of the page */
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    flex: 1;
+    position: relative;
+}
+
+.row:first-child {
+    flex: 2;
+    background-color: #ed3700; /* Change background color to black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row:last-child {
+    flex: 1;
+}
+
+.right-column {
+    background-color: #0d5011;
+    flex: 4; /* 25% of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-box {
+    position: absolute;
+    bottom: clamp(-15px + 0.1vh, 0px - 0.1vh, 13rem); /* Adjust this value to lower the text more */
+    right: 0%; /* Position the right side of the title at the 75% line */
+    margin: 0; /* Ensure no margin is applied */
+    margin-bottom: -2dvw;
+    padding: 0; /* Ensure no padding is applied */
+}
+
+.title {
+    color: #0d5011; /* Adjust color as needed */
+    font-size: 16rem; /* Adjust font size as needed */
+    line-height: 1;
+    font-size: clamp(3rem, -0.8462rem + 20.5128vw, 13rem);
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.vertical-text {
+    font-family: 'Epilogue-Regular';
+    position: absolute;
+    top: 50%;
+    right: 7vh; /* Adjust this value to position the text correctly */
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right top;
+    color: #0d5011; /* Adjust color as needed */
+    font-size: clamp(1rem, 0.4231rem + 6.0769vh, 10rem);
+    z-index: 100000;
+    white-space: nowrap;
+}
+
+.right-column .text {
+    font-family: 'Epilogue-Regular';
+    color: #ed3700; /* Adjust color as needed */
+    margin-bottom: clamp(0.5rem, 1.5vw + 2.5vw, 6rem); /* Adjust margin as needed */
+    height: 50px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px; /* Adjust this value to increase/decrease space between text and underline */
+}
+
+.shop {
+    font-size: clamp(3.3rem, 10vw - 0.5vw, 6rem);
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(0.5rem, 8vw - 2vw, 3.25rem);
+    line-height: 1;
+    width: 25vw;
+}
+
+/* Mobile version */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .right-column {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem;
+    }
+
+    .right-column .right-side {
+        flex: 1; /* Right side of the green box */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .title-box {
+        position: static;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .title {
+        font-size: clamp(7.5rem, 0.375rem + 38vw, 8rem);
+    }
+
+    .vertical-text {
+        position: relative;
+        top: 50%;
+        width: 100%;
+        right: 0;
+        transform: translateY(0) rotate(0);
+        color: #0d5011;
+        font-size: clamp(2.1rem, 1.2rem + 4.8vw, 3.3rem);
+        z-index: 100000;
+    }
+
+    .right-column .text {
+        font-size: clamp(1rem, 4vw, 2rem);
+        padding: 0;
+        margin: 0;
+        height: auto;
+        text-align: top;
+        top: 0
+    }
+
+    .shop{
+        text-align: center;
+        font-size: clamp(3rem, 0.75rem + 12vw, 4rem);
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .contacts{
+        text-align: center;
+        font-size: clamp(2.1rem, 1.2rem + 4.8vw, 2.2rem);
+    }
+
+    .left-side{
+        flex: 1; /* Right side of the green box */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ed3700;
+        height: 100%;
+    }
+}
+
+
+a {
+    color: #ed3700; /* Adjust link color as needed */
+    text-decoration: none;
+}
+
+
