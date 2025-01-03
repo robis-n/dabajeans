@@ -44,6 +44,7 @@
 }
 
 .modal-overlay.active .modal-content {
+    height: auto;
     transform: scale(1);
     opacity: 1;
 }
