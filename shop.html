@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!------------------- Google tag (gtag.js) ----------------->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZJKGJVN21"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,15 +10,22 @@
 
         gtag('config', 'G-HZJKGJVN21');
     </script>
+    <!----------------------------------------------------------->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>dabajeans - shop</title>
-    <link rel="stylesheet" href="./css/shop.css">
-    <link rel="stylesheet" href="./css/modal.css">
+
+    <link rel="stylesheet" href="./css/shop-main.css">
+    <link rel="stylesheet" href="./css/overlays/item-info.css">
+    <link rel="stylesheet" href="./css/overlays/purchase.css">
+    <link rel="stylesheet" href="./css/overlays/fullscreen.css">
+
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
-    <!--email-->
+
+    <!---------------email------------------------>
     <script type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -30,6 +37,7 @@
         })();
     </script>
     <script src="./js/email.js"></script>
+    <!---------------------------------------------->
 
 </head>
 <body>
@@ -51,9 +59,9 @@
                 <p id="modalDescription"></p>
                 <button class="purchase-btn" id="openPurchaseForm">Request Purchase</button>
             </div>
-            <button class="image-nav prev" id="prevImage">Previous</button>
-            <button class="image-nav next" id="nextImage">Next</button>
         </div>
+        <button class="image-nav prev" id="prevImage">Previous</button>
+        <button class="image-nav next" id="nextImage">Next</button>
     </div>
     <div class="fullscreen-overlay" id="fullscreenOverlay">
         <button class="fullscreen-close" id="fullscreenClose">&times;</button>
