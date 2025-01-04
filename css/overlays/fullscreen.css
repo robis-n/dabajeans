@@ -30,8 +30,8 @@
 
 .fullscreen-close {
     position: fixed; /* Change to fixed */
-    top: 20px;
-    right: 10px;
+    top: 10px;
+    right: 20px;
     font-size: 60px;
     color: white;
     background: none;
