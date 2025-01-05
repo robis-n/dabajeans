@@ -10,17 +10,18 @@
 
         gtag('config', 'G-HZJKGJVN21');
     </script>
+    <script src="./js/apply.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dabajeans - contacts</title>
-    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/contacts.css">
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
 <body>
     <div class="container">
         <div class="column left-column">
             <div class="row">
-                <div class="vertical-text">welcome to</div>
+                <div class="welcome">welcome to</div>
             </div>
             <div class="row">
                 <div class="title-box">
@@ -29,23 +30,47 @@
             </div>
         </div>
         <div class="column right-column">
-            <div class="left-side" style="justify-content: center; align-items: center; overflow-y: auto;">
-                <div style="text-align: center; color: #0d5011; font-family: 'Epilogue-Regular'; margin-top: 30px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px;">
-                    <h2 style="font-size: clamp(2rem, 1.5rem + 2vw, 3rem); margin-bottom: 2rem;">Get in Touch</h2>
-                    <p style="font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);; margin-bottom: 1rem; ">Email: daba.garment@gmail.com</p>
-                    <p style="font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);; margin-bottom: 1rem; ">Instagram: <span><a href="https://www.instagram.com/dabajeans/" style="color: #0d5011; text-decoration: underline;">@dabajeans</a></span></p>
-                    <p style="font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);; margin-bottom: 2rem;">TikTok: <span><a href="https://www.tiktok.com/@daba.jeans" style="color: #0d5011; text-decoration: underline;">@daba.jeans</a></span></p>
-                    
-                    <div style="margin-top: 3rem;">
-                        <h3 style="font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); margin-bottom: 1rem;">Location</h3>
-                        <p style="font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem);;">Raiņa bulvāris 8, Riga, Latvia</p>
+            <div class="left-side">
+                <div class="content">
+                    <div>
+                        <h2>Get in Touch</h2>
+                        <p>Email: daba.garment@gmail.com</p>
+                        <p>Instagram: <span><a href="https://www.instagram.com/dabajeans/" style="color: #0d5011; text-decoration: underline;">@dabajeans</a></span></p>
+                        <p>TikTok: <span><a href="https://www.tiktok.com/@daba.jeans" style="color: #0d5011; text-decoration: underline;">@daba.jeans</a></span></p>
+                        <p>Location: Raiņa bulvāris 8, Riga, Latvia</p>
+                    </div>
+                    <div class="content-boxes">
+                        <h3>Become part of our team!</h3>
+                        <p>Join our creative family and help us bring jeans to life.</p>
+                        <p><button class="apply-btn" id="openApply">Apply</button></p>
                     </div>
                 </div>
             </div>
             <div class="right-side">
                 <div class="text"><p class="home"><a href="./">home</a></p></div>
-                <div class="text"><p class="contacts"><a href="shop">shop</a></p></div>
+                <div class="text"><p class="shop"><a href="shop">shop</a></p></div>
             </div>
+        </div>
+    </div>
+    <div class="apply-overlay" id="applyOverlay">
+        <div class="apply-modal">
+            <button class="modal-close" id="applyClose">&times;</button>
+            <h2>Apllication</h2>
+            <form id="applyForm">
+                <div class="form-group">
+                    <input type="text" id="name-surname-apply" placeholder="Full Name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email-apply" placeholder="Your Email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone-apply" placeholder="Your Phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="exp-apply" placeholder="A brief note about yourself:)" name="exp" required>
+                </div>
+                <button type="button" class="apply-btn" onclick="sendApply()">Apply</button>
+            </form>
         </div>
     </div>
 </body>

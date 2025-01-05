@@ -125,3 +125,12 @@
     outline: none;
     border-color: #083a0b;
 }
+
+::placeholder {
+    color: #0d5011;
+    opacity: 1; /* Firefox */
+  }
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #0d5011;
+}
