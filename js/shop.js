@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = document.getElementById('modalClose');
     const prevButton = document.getElementById('prevImage');
     const nextButton = document.getElementById('nextImage');
-    
     const galleryPrev = document.getElementById('galleryPrev');
     const galleryNext = document.getElementById('galleryNext');
 

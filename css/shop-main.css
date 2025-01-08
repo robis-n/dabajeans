@@ -244,6 +244,10 @@ a {
     aspect-ratio: 1;
 }
 
+.catalog-item-sold img {
+    aspect-ratio: 1;
+}
+
 .catalog-item {
     width: clamp(170px, 50vw, 350px);
     height: clamp(170px, 50vw, 350px);
@@ -252,6 +256,15 @@ a {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+}
+
+.catalog-item-sold {
+    width: clamp(170px, 50vw, 350px);
+    height: clamp(170px, 50vw, 350px);
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .item-details {
@@ -281,6 +294,12 @@ a {
 .catalog-item p {
     margin-top: 0.5rem;
     font-size: 2rem;
+}
+
+.catalog-item-sold p {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    text-decoration: line-through;
 }
 
 /* Desktop version */
