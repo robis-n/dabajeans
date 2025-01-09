@@ -44,7 +44,7 @@
 }
 
 .modal-overlay.active .modal-content {
-    height: auto;
+    height: 85vh;
     transform: scale(1);
     opacity: 1;
 }
@@ -94,7 +94,7 @@
     flex: 1;
     color: #0d5011;
     font-family: 'Epilogue-Regular';
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #0d5011 #ed3700;
     padding-right: 20px;
@@ -156,6 +156,7 @@
     z-index: 1001;
     transition: all 0.3s ease;
     transform-origin: center;
+    border-radius: 20px;
 }
 
 .modal-close:hover {
@@ -324,11 +325,11 @@
     }
 
     button#prevImage {
-        margin-bottom: 20px;
+        margin-bottom: -23px;
     }
 
     button#nextImage {
-        margin-bottom: 20px;
+        margin-bottom: -23px;
     }
     .modal-content {
         padding-bottom: calc(40px + 1rem);
