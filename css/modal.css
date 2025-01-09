@@ -99,6 +99,7 @@
     scrollbar-color: #0d5011 #ed3700;
     padding-right: 20px;
     padding-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Modal Details Scrollbar Styles */
@@ -324,11 +325,11 @@
     }
 
     button#prevImage {
-        margin-bottom: -23px;
+        margin-bottom: 0px;
     }
 
     button#nextImage {
-        margin-bottom: -23px;
+        margin-bottom: 00px;
     }
     .modal-content {
         padding-bottom: calc(40px + 1rem);
