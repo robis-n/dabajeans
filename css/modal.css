@@ -292,6 +292,7 @@
     object-fit: contain;
     padding: 1rem;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Modal Animations */
