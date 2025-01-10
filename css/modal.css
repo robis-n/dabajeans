@@ -98,7 +98,7 @@
     scrollbar-width: thin;
     scrollbar-color: #0d5011 #ed3700;
     padding-bottom: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 /* Modal Details Scrollbar Styles */
@@ -324,11 +324,11 @@
     }
 
     button#prevImage {
-        margin-bottom: 0px;
+        margin-bottom: 30px;
     }
 
     button#nextImage {
-        margin-bottom: 00px;
+        margin-bottom: 30px;
     }
     .modal-content {
         padding-bottom: calc(40px + 1rem);
