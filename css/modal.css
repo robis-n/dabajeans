@@ -97,7 +97,6 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #0d5011 #ed3700;
-    padding-right: 20px;
     padding-bottom: 20px;
     margin-bottom: 25px;
 }
@@ -334,7 +333,7 @@
     .modal-content {
         padding-bottom: calc(40px + 1rem);
         flex-direction: column;
-        padding: 1rem;
+        padding: 2rem;
     }
 
     .modal-image {
@@ -344,8 +343,6 @@
 
     .modal-close {
         font-size: clamp(6rem, 10vw, 8rem);
-        top: 5px;
-        right: 15px;
         border-radius: 20px;
     }
 }
@@ -377,7 +374,7 @@
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+    width: calc(100% - 2rem);
     padding: 0.8rem;
     border: 2px solid #0d5011;
     background: #ed3700;
@@ -385,6 +382,15 @@
     font-family: 'Epilogue-Regular';
     font-size: 1rem;
     border-radius: 4px;
+}
+
+::placeholder {
+    color: #0d5011;
+    opacity: 1; /* Firefox */
+  }
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #0d5011;
 }
 
 .form-group textarea {
@@ -450,6 +456,7 @@
     overflow-y: auto; /* Enable scrolling */
     scrollbar-width: thin;
     scrollbar-color: #0d5011 #ed3700;
+    overflow-x: hidden;
 }
 
 .purchase-modal::-webkit-scrollbar {
