@@ -1,10 +1,10 @@
 {
   "apps": [
     {
-      "app_id": "app_2da234e5-298f-4a48-98c2-82e12c427450",
+      "app_id": "app_be933b43-aa60-416d-bf9a-13c7fb7c54d9",
       "org_id": "user_9d8a9f59-d23c-4f89-9bb1-c8783f6cae6f",
-      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_2da234e5-298f-4a48-98c2-82e12c427450.git",
-      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_2da234e5-298f-4a48-98c2-82e12c427450.git",
+      "deploy_url": "https://push-n3-par-clevercloud-customers.services.clever-cloud.com/app_be933b43-aa60-416d-bf9a-13c7fb7c54d9.git",
+      "git_ssh_url": "git+ssh://git@push-n3-par-clevercloud-customers.services.clever-cloud.com/app_be933b43-aa60-416d-bf9a-13c7fb7c54d9.git",
       "name": "dabajeans",
       "alias": "dabajeans"
     }
